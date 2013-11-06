@@ -22,6 +22,17 @@
     <div>
     
            <table class="left_table">
+                 <tr>
+                <td ><div id="lbl_dt">
+                    
+                   <asp:Label ID="lbl_date" runat="server"></asp:Label>
+                    
+
+
+                    </div>
+
+                </td>
+            </tr>
             <tr>
                 <td ><div class="left_row">
 
