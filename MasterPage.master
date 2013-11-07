@@ -36,16 +36,21 @@
             <tr>
                 <td ><div class="left_row">
 
-                    <img class="left_tbl_pic" src="Images/forecasts.jpg" /></div>
+                    <asp:Image ID="Image3"  class="left_tbl_pic" runat="server" ImageUrl="~/Images/forecasts.jpg" 
+                    AlternateText="forecasting" /></div>
+                    
 
                 </td>
             </tr>
             <tr>
-                <td ><div class="left_row"><img class="left_tbl_pic" src="Images/Creative_Staffing.jpg" /></div></td>
+                <td ><div class="left_row"><asp:Image ID="Image1" class="left_tbl_pic" runat="server" ImageUrl="~/Images/Creative_Staffing.jpg" 
+                    AlternateText="creative_staff" /></div></td>
                 
             </tr>
             <tr>
-                <td ><div class="left_row"><img class="left_tbl_pic" src="Images/Staffing_careers.jpg" /></div></td>
+                <td ><div class="left_row"><asp:Image ID="Image2"  class="left_tbl_pic" runat="server" ImageUrl="~/Images/Staffing_careers.jpg" 
+                    AlternateText="creative_career" /></div></td>
+                
             </tr>
             <tr>
                 <td><div id="left_row_buttom"></div></td>
@@ -57,7 +62,9 @@
                 <td><div id="logo_name">WM STAFFING</div></td>
             </tr>
             <tr>
-                <td><div id="top_pic"><img id="toppic" src="Images/staffing.jpg" /></div></td>
+                <td><div id="top_pic"> <asp:Image ID="toppic" runat="server" ImageUrl="~/Images/staffing.jpg" 
+                    AlternateText="Staffing" /></div></td>
+                
             </tr>
             <tr>
                 <td class="auto-style1">
