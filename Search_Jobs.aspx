@@ -35,7 +35,7 @@
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>View All Jobs</td>
+            <td><asp:HyperLink ID="HyperLink1"  runat="server" NavigateUrl="~/View_All_Jobs.aspx">View All Jobs</asp:HyperLink></td>
             <td>&nbsp;</td>
         </tr>
         <tr>
@@ -57,7 +57,7 @@
 
 
     <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource2" AllowPaging="True">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource2" AllowPaging="True" CssClass="GV">
         <Columns>
             <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
             <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />

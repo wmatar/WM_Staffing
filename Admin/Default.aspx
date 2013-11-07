@@ -16,13 +16,18 @@
     <br />
 
     <asp:MultiView ID="Admin_MultiView" runat="server">
-
+        
 
 
 
         <asp:View ID="State_View" runat="server">
 
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [STATE] WHERE [State_ID] = @State_ID" InsertCommand="INSERT INTO [STATE] ([State_Name]) VALUES (@State_Name)" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [STATE]" UpdateCommand="UPDATE [STATE] SET [State_Name] = @State_Name WHERE [State_ID] = @State_ID">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                DeleteCommand="DELETE FROM [STATE] WHERE [State_ID] = @State_ID" 
+                InsertCommand="INSERT INTO [STATE] ([State_Name]) VALUES (@State_Name)" 
+                ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                SelectCommand="SELECT * FROM [STATE]" 
+                UpdateCommand="UPDATE [STATE] SET [State_Name] = @State_Name WHERE [State_ID] = @State_ID">
                 <DeleteParameters>
                     <asp:Parameter Name="State_ID" Type="Int32" />
                 </DeleteParameters>
@@ -35,19 +40,26 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="State_ID" DataSourceID="SqlDataSource1">
+            <h3>Update States</h3><br />
+            Edit/Delete State:<br />
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" 
+                DataKeyNames="State_ID" DataSourceID="SqlDataSource1" CssClass="GV">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
-                    <asp:BoundField DataField="State_ID" HeaderText="State_ID" InsertVisible="False" ReadOnly="True" SortExpression="State_ID" />
-                    <asp:BoundField DataField="State_Name" HeaderText="State_Name" SortExpression="State_Name" />
+                    <asp:BoundField DataField="State_ID" HeaderText="State ID" InsertVisible="False" ReadOnly="True" 
+                        SortExpression="State_ID" />
+                    <asp:BoundField DataField="State_Name" HeaderText="State Name" SortExpression="State_Name" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" HeaderText="Control" />
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="State_ID" DataSourceID="SqlDataSource1" Height="50px" Width="125px">
+            Add New State:<br />
+            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="State_ID" 
+                DataSourceID="SqlDataSource1" Height="50px" Width="125px" DefaultMode="Insert" CssClass="DV">
                 <Fields>
-                    <asp:BoundField DataField="State_ID" HeaderText="State_ID" InsertVisible="False" ReadOnly="True" SortExpression="State_ID" />
-                    <asp:BoundField DataField="State_Name" HeaderText="State_Name" SortExpression="State_Name" />
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                    <asp:BoundField DataField="State_ID" HeaderText="State ID" InsertVisible="False" ReadOnly="True" 
+                        SortExpression="State_ID" />
+                    <asp:BoundField DataField="State_Name" HeaderText="State Name" SortExpression="State_Name" />
+                    <asp:CommandField ShowInsertButton="True" ButtonType="Button" NewText="Add New" />
                 </Fields>
             </asp:DetailsView>
 
@@ -87,10 +99,12 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource2">
+            <h3>Update Jobs:</h3><br />
+            <br />
+            Edit/Delete Jobs:<br />
+            <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource2" CssClass="GV">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
-                    <asp:BoundField DataField="Job_ID" HeaderText="Job_ID" InsertVisible="False" ReadOnly="True" SortExpression="Job_ID" />
+                    <asp:BoundField DataField="Job_ID" HeaderText="Job ID" InsertVisible="False" ReadOnly="True" SortExpression="Job_ID" />
                     <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
                     <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                     <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
@@ -98,14 +112,17 @@
                     <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
                     <asp:BoundField DataField="Contacct" HeaderText="Contacct" SortExpression="Contacct" />
                     <asp:BoundField DataField="Requirements" HeaderText="Requirements" SortExpression="Requirements" />
-                    <asp:BoundField DataField="Posting_Date" HeaderText="Posting_Date" SortExpression="Posting_Date" />
-                    <asp:BoundField DataField="Closing_Date" HeaderText="Closing_Date" SortExpression="Closing_Date" />
+                    <asp:BoundField DataField="Posting_Date" HeaderText="Posting Date" SortExpression="Posting_Date" />
+                    <asp:BoundField DataField="Closing_Date" HeaderText="Closing Date" SortExpression="Closing_Date" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" HeaderText="Control" />
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView2" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource2" Height="50px" Width="125px">
+            <br />
+            Add New Job:<br />
+            <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource2" Height="50px" Width="125px" DefaultMode="Insert" CssClass="DV">
                 <Fields>
-                    <asp:BoundField DataField="Job_ID" HeaderText="Job_ID" InsertVisible="False" ReadOnly="True" SortExpression="Job_ID" />
+                    <asp:BoundField DataField="Job_ID" HeaderText="Job ID" InsertVisible="False" ReadOnly="True" SortExpression="Job_ID" />
                     <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
                     <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
                     <asp:BoundField DataField="Location" HeaderText="Location" SortExpression="Location" />
@@ -113,9 +130,9 @@
                     <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
                     <asp:BoundField DataField="Contacct" HeaderText="Contacct" SortExpression="Contacct" />
                     <asp:BoundField DataField="Requirements" HeaderText="Requirements" SortExpression="Requirements" />
-                    <asp:BoundField DataField="Posting_Date" HeaderText="Posting_Date" SortExpression="Posting_Date" />
-                    <asp:BoundField DataField="Closing_Date" HeaderText="Closing_Date" SortExpression="Closing_Date" />
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                    <asp:BoundField DataField="Posting_Date" HeaderText="Posting Date" SortExpression="Posting_Date" />
+                    <asp:BoundField DataField="Closing_Date" HeaderText="Closing Date" SortExpression="Closing_Date" />
+                    <asp:CommandField ShowInsertButton="True" ButtonType="Button" NewText="Add New" />
                 </Fields>
             </asp:DetailsView>
             <br />
@@ -156,36 +173,39 @@
                     <asp:Parameter Name="Applicant_ID" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
+            <h3>Update Applicants</h3><br />
             <br />
-            <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Applicant_ID" DataSourceID="SqlDataSource3">
+            Edit/Delete Applicants:<br />
+            <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Applicant_ID" DataSourceID="SqlDataSource3" CssClass="GV">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
-                    <asp:BoundField DataField="Applicant_ID" HeaderText="Applicant_ID" InsertVisible="False" ReadOnly="True" SortExpression="Applicant_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="Applicant_ID" HeaderText="Applicant ID" InsertVisible="False" ReadOnly="True" SortExpression="Applicant_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" HeaderText="Control" />
                 </Columns>
             </asp:GridView>
             <br />
-            <asp:DetailsView ID="DetailsView3" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Applicant_ID" DataSourceID="SqlDataSource3" Height="50px" Width="125px">
+            Add New Application:<br />
+            <asp:DetailsView ID="DetailsView3" runat="server" AutoGenerateRows="False" DataKeyNames="Applicant_ID" DataSourceID="SqlDataSource3" Height="50px" Width="125px" DefaultMode="Insert" CssClass="DV">
                 <Fields>
-                    <asp:BoundField DataField="Applicant_ID" HeaderText="Applicant_ID" InsertVisible="False" ReadOnly="True" SortExpression="Applicant_ID" />
-                    <asp:BoundField DataField="F_Name" HeaderText="F_Name" SortExpression="F_Name" />
-                    <asp:BoundField DataField="L_Name" HeaderText="L_Name" SortExpression="L_Name" />
+                    <asp:BoundField DataField="Applicant_ID" HeaderText="Applicant ID" InsertVisible="False" ReadOnly="True" SortExpression="Applicant_ID" />
+                    <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
+                    <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
                     <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip_Code" SortExpression="Zip_Code" />
+                    <asp:BoundField DataField="Zip_Code" HeaderText="Zip" SortExpression="Zip_Code" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
                     <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
                     <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                    <asp:CommandField ShowInsertButton="True" ButtonType="Button" NewText="Add New" />
                 </Fields>
             </asp:DetailsView>
 

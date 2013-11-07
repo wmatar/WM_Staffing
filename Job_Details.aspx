@@ -18,7 +18,7 @@
     </asp:SqlDataSource><br />
 
     <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" 
-        AutoGenerateRows="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource1">
+        AutoGenerateRows="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource1" CssClass="DV">
 
         <Fields>
             <asp:BoundField DataField="Job_ID" HeaderText="Job ID" InsertVisible="False" ReadOnly="True" 

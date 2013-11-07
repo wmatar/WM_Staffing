@@ -37,7 +37,7 @@
         </UpdateParameters>
 </asp:SqlDataSource><br />
 
-    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Applicant_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="Applicant_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert" CssClass="DV">
         <Fields>
             <asp:BoundField DataField="F_Name" HeaderText="First Name" SortExpression="F_Name" />
             <asp:BoundField DataField="L_Name" HeaderText="Last Name" SortExpression="L_Name" />
