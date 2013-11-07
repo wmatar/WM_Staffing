@@ -3,7 +3,7 @@
 
 
 .left_table {
-   
+   height: 1500px;
     border:solid 1px;
     background-color:gray;
     float: left;
@@ -16,6 +16,7 @@
 
 .right_table {
     width: 55%;
+    height: 1500px;
     border:solid 1px;
     background-color:white;
     
@@ -23,12 +24,14 @@
 
 
 .footer_table {
-    width: 80%;
-    height:400px;
+    width:1101px;
+    height:200px;
     border:solid 1px;
-    background-color:brown;
+    background-color:black;
     margin-left:100px;
     margin-bottom:-50px;
+    color: white;
+    text-align:center;
 }
 
 .left_tbl_pic {

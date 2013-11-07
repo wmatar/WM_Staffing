@@ -9,11 +9,7 @@
     </asp:ContentPlaceHolder>
     <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
     
-    <style type="text/css">
-        .auto-style1 {
-            height: 23px;
-        }
-    </style>
+   
 
     
 </head>
@@ -89,7 +85,7 @@
                 </td>
             </tr>
         </table>
-    <br />
+    
 
 
 
@@ -112,7 +108,7 @@
 
 
 
-        <br />
+        
         <table class="footer_table">
             <tr>
                 <td>&nbsp;</td>
@@ -120,7 +116,7 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td colspan="3">&nbsp;</td>
+                <td colspan="3">This web site was created as an assignment for Softeware Design class at The University of Iowa.</td>
             </tr>
         </table>
 
