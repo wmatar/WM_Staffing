@@ -1,4 +1,4 @@
-﻿body {background-color:purple;
+﻿body {background-color:black;
 }
 
 
@@ -27,11 +27,16 @@
     width:1101px;
     height:200px;
     border:solid 1px;
-    background-color:black;
+    background-color:#2b4181;
     margin-left:100px;
     margin-bottom:-50px;
     color: white;
     text-align:center;
+}
+
+
+.cont_tbl {
+    width:60%;
 }
 
 .left_tbl_pic {
@@ -88,18 +93,38 @@
 
 /*-----------------------GridView--------------------*/
 .GV {
-
+    text-align:center;
+    font-size:11px;
+    background-color:#ccccff;
 
 }
 
+.GV th {
+    background-color:black; 
+        height: 40px;
+        color:white;
+
+
+}
 
 
 
 /*---------------------DetailsView------------------*/
 .DV {
-    padding:10px; border:solid 1px #c1c1c1; color:#717171;
-    text-align:left; background-color:green; 
+    
+    text-align:left; 
+    background-color:#ccccff; 
+    width:200px;
 
 }
 
+.dv_header_style {
+    background-color:black;
+    color:white;
     
+}
+
+.admin_h3 {
+    text-align:center;
+    text-decoration:underline;
+}

@@ -39,8 +39,8 @@
                     <asp:Parameter Name="State_ID" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
-            <br />
-            <h3>Update States</h3><br />
+            <br /><div class="admin_h3"><h3 >Update States</h3></div>
+            
             Edit/Delete State:<br />
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" 
                 DataKeyNames="State_ID" DataSourceID="SqlDataSource1" CssClass="GV">
@@ -99,7 +99,7 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <br />
-            <h3>Update Jobs:</h3><br />
+            <div class="admin_h3"><h3 >Update Jobs</h3></div>
             <br />
             Edit/Delete Jobs:<br />
             <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource2" CssClass="GV">
@@ -172,8 +172,8 @@
                     <asp:Parameter Name="DOB" Type="String" />
                     <asp:Parameter Name="Applicant_ID" Type="Int32" />
                 </UpdateParameters>
-            </asp:SqlDataSource>
-            <h3>Update Applicants</h3><br />
+            </asp:SqlDataSource><div class="admin_h3"><h3 >Update Applicants</h3></div>
+            <br />
             <br />
             Edit/Delete Applicants:<br />
             <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Applicant_ID" DataSourceID="SqlDataSource3" CssClass="GV">

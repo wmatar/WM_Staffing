@@ -17,8 +17,10 @@
         </SelectParameters>
     </asp:SqlDataSource><br />
 
-    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" 
+    <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" 
         AutoGenerateRows="False" DataKeyNames="Job_ID" DataSourceID="SqlDataSource1" CssClass="DV">
+
+        <FieldHeaderStyle CssClass="dv_header_style" />
 
         <Fields>
             <asp:BoundField DataField="Job_ID" HeaderText="Job ID" InsertVisible="False" ReadOnly="True" 
@@ -33,6 +35,7 @@
             <asp:BoundField DataField="Posting_Date" HeaderText="Posting Date" SortExpression="Posting_Date" />
             <asp:BoundField DataField="Closing_Date" HeaderText="Closing Date" SortExpression="Closing_Date" />
         </Fields>
+        <FooterStyle />
     </asp:DetailsView>
 
 
