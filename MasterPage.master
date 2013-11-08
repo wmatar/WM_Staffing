@@ -49,7 +49,7 @@
                 
             </tr>
             <tr>
-                <td><div id="left_row_buttom"></div></td>
+                <td><div id="ft_rw_btom"></div></td>
             </tr>
         </table>
         
@@ -82,6 +82,7 @@
                 <td>
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
+                    <div id="rght_tbl_buttom"></div>
                 </td>
             </tr>
         </table>
@@ -109,17 +110,7 @@
 
 
         
-        <table class="footer_table">
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td colspan="3">This web site was created as an assignment for Softeware Design class at The University of Iowa.</td>
-            </tr>
-        </table>
-
+        
 
 
 

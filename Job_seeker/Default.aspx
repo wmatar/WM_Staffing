@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <h3>This is the Default Job Seekers</h3>
+    <h3>This is the Default Job Seekers</h3><br /><br /><br /><br />
 
 </asp:Content>
 

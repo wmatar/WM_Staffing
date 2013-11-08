@@ -3,7 +3,7 @@
 
 
 .left_table {
-   height: 1500px;
+  /* height: 1500px;*/
     border:solid 1px;
     background-color:gray;
     float: left;
@@ -12,26 +12,17 @@
     
     
 }
-    
+
+
+
 
 .right_table {
     width: 55%;
-    height: 1500px;
+    /*height: 1500px;*/
     border:solid 1px;
     background-color:white;
+    bottom:100px;
     
-}
-
-
-.footer_table {
-    width:1101px;
-    height:200px;
-    border:solid 1px;
-    background-color:#2b4181;
-    margin-left:100px;
-    margin-bottom:-50px;
-    color: white;
-    text-align:center;
 }
 
 
@@ -128,3 +119,4 @@
     text-align:center;
     text-decoration:underline;
 }
+

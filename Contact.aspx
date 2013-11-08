@@ -14,30 +14,35 @@
                 <td>First Name:</td>
                 <td>
                     <asp:TextBox ID="fname" runat="server"></asp:TextBox>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="fname" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td>Last Name:</td>
                 <td>
                     <asp:TextBox ID="lname" runat="server"></asp:TextBox>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="lname" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td>Your Email:</td>
                 <td>
                     <asp:TextBox ID="email" runat="server"></asp:TextBox>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="email" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td>Subject:</td>
                 <td>
                     <asp:TextBox ID="subject" runat="server"></asp:TextBox>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="subject" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td>Message:</td>
                 <td>
                     <asp:TextBox ID="message" runat="server" Height="120px" Width="241px" TextMode="MultiLine"></asp:TextBox>
+                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="message" ErrorMessage="*"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -52,9 +57,6 @@
         <br />
     
     </div>
-
-
-
-
+<br /><br /><br />
 </asp:Content>
 
